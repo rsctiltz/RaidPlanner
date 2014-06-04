@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Adventurer" representedClassName="Adventurer">
+        <attribute name="name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="species" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="raiders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Raid" inverseName="adventures" inverseEntity="Raid" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <entity name="Raid" representedClassName="Raid" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="adventures" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Adventurer" inverseName="raiders" inverseEntity="Adventurer" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Adventurer" positionX="261" positionY="189" width="128" height="88"/>
+        <element name="Raid" positionX="261" positionY="198" width="128" height="73"/>
+    </elements>
+</model>
